@@ -1,0 +1,23 @@
+{
+  "name": "styled-antd",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  },
+  "dependencies": {
+    "csstype": "^3.1.2",
+    "lodash.mergewith": "^4.6.2"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "antd": "^5.11.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}
