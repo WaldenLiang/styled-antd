@@ -787,6 +787,11 @@ export type BorderProps = {
    */
   borderBlockStartStyle?: GenericToken<Css.Property.BorderBlockStartStyle>;
   /**
+   * The CSS `border-block-end-style` property. Tokenization is not supported.
+   * @type native
+   */
+  borderBlockEndStyle?: GenericToken<Css.Property.BorderBlockEndStyle>;
+  /**
    * The CSS `border-collapse` property. Tokenization is not supported.
    * @type native
    */
