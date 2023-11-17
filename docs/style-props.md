@@ -1,5 +1,7 @@
 # Style Props
 
+Styled Antd 支持大多数的 Css 属性以及伪类选择器，并且提供了属性缩写。其中一些属性支持使用 Antd 的主题 Token，而有一些不支持，你可以通过下面的表格中的`Theme`列来得知是否支持，Y 表示支持，N 表示不支持。
+
 ## Margin and padding
 
 | Prop                                 | CSS Property                 | Theming |
@@ -83,10 +85,10 @@
 | minH, minHeight | min-height      | Y       |
 | maxH, maxHeight | max-height      | Y       |
 | boxSize         | width, height   | Y       |
-| verticalAlign   | vertical-align  | Y       |
-| overflow        | overflow        | Y       |
-| overflowX       | overflow-x      | Y       |
-| overflowY       | overflow-y      | Y       |
+| verticalAlign   | vertical-align  | N       |
+| overflow        | overflow        | N       |
+| overflowX       | overflow-x      | N       |
+| overflowY       | overflow-y      | N       |
 | inlineSize      | inline-size     | Y       |
 | minInlineSize   | min-inline-size | Y       |
 | maxInlineSize   | max-inline-size | Y       |
@@ -98,8 +100,8 @@
 
 | Prop                   | CSS Property    | Theming |
 | ---------------------- | --------------- | ------- |
-| display                | display         | Y       |
-| aspectRatio            | aspect-ratio    | Y       |
+| display                | display         | N       |
+| aspectRatio            | aspect-ratio    | N       |
 | gap                    | gap             | Y       |
 | rowGap                 | row-gap         | Y       |
 | columnGap              | column-gap      | Y       |
@@ -240,10 +242,10 @@
 | ---------------------------- | ------------------ | ------- |
 | pos, position                | position           | N       |
 | zIndex                       | z-index            | Y       |
-| top                          | top                | N       |
-| right                        | right              | N       |
-| bottom                       | bottom             | N       |
-| left                         | left               | N       |
+| top                          | top                | Y       |
+| right                        | right              | Y       |
+| bottom                       | bottom             | Y       |
+| left                         | left               | Y       |
 | float                        | float              | N       |
 | inset                        | inset              | N       |
 | insetX                       | left + right       | Y       |
@@ -344,29 +346,105 @@
 
 | Prop                             | CSS Property          | Theming |
 | -------------------------------- | --------------------- | ------- |
-| animation                        | animation             |
-| appearance                       | appearance            |
-| clipPath                         | clip-path             |
-| visibility                       | visibility            |Y|
-| isolation                        | isolation             |Y|
-| userSelect                       | user-select           |
-| pointerEvents                    | pointer-events        |
-| boxSizing                        | box-sizing            |
-| boxDecorationBreak               | box-decoration-break  |
-| cursor                           | cursor                |
-| resize                           | resize                |
-| willChange                       | will-change           |
-| objectFit                        | object-fit            |
-| objectPosition                   | object-position       |
-| fill                             | fill                  |
-| stroke                           | stroke                |
-| outline                          | outline               |
-| outlineOffset                    | outline-offset        |
-| outlineColor                     | outline-color         |
-| listStyleType                    | list-style-type       |
-| listStylePosition, listStylePos  | list-style-position   |
-| listStyleImage, listStyleImg     | list-style-Image      |
-| overscrollBehavior, overscroll   | overscroll-behavior   |
-| overscrollBehaviorX, overscrollX | overscroll-behavior-x |
-| overscrollBehaviorY, overscrollY | overscroll-behavior-y |
-| mixBlendMode, blendMode          | mix-blend-mode        |
+| animation                        | animation             | N       |
+| appearance                       | appearance            | N       |
+| clipPath                         | clip-path             | N       |
+| visibility                       | visibility            | N       |
+| isolation                        | isolation             | N       |
+| userSelect                       | user-select           | N       |
+| pointerEvents                    | pointer-events        | N       |
+| boxSizing                        | box-sizing            | N       |
+| boxDecorationBreak               | box-decoration-break  | N       |
+| cursor                           | cursor                | N       |
+| resize                           | resize                | N       |
+| willChange                       | will-change           | N       |
+| objectFit                        | object-fit            | N       |
+| objectPosition                   | object-position       | N       |
+| fill                             | fill                  | Y       |
+| stroke                           | stroke                | Y       |
+| outline                          | outline               | N       |
+| outlineOffset                    | outline-offset        | N       |
+| outlineColor                     | outline-color         | Y       |
+| listStyleType                    | list-style-type       | N       |
+| listStylePosition, listStylePos  | list-style-position   | N       |
+| listStyleImage, listStyleImg     | list-style-Image      | N       |
+| overscrollBehavior, overscroll   | overscroll-behavior   | N       |
+| overscrollBehaviorX, overscrollX | overscroll-behavior-x | N       |
+| overscrollBehaviorY, overscrollY | overscroll-behavior-y | N       |
+| mixBlendMode, blendMode          | mix-blend-mode        | N       |
+
+## Pseudo（伪类选择器）
+
+| Prop                   | CSS Property                                                                                                                                                         |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \_hover                | &:hover<br>&[data-hover]                                                                                                                                             |
+| \_active               | &:active<br>&[data-active]                                                                                                                                           |
+| \_focus                | &:focus<br>&[data-focus]                                                                                                                                             |
+| \_highlighted          | &[data-highlighted]                                                                                                                                                  |
+| \_focusWithin          | &:focus-within                                                                                                                                                       |
+| \_focusVisible         | &:focus-visible                                                                                                                                                      |
+| \_disabled             | &[disabled]<br>&[aria-disabled=true]<br>&[data-disabled]                                                                                                             |
+| \_readOnly             | &[aria-readonly=true]<br>&[readonly]<br>&[data-readonly]                                                                                                             |
+| \_before               | &::before                                                                                                                                                            |
+| \_after                | &::after                                                                                                                                                             |
+| \_empty                | &:empty                                                                                                                                                              |
+| \_expanded             | &[aria-expanded=true]<br>&[data-expanded]                                                                                                                            |
+| \_checked              | &[aria-checked=true]<br>&[data-checked]                                                                                                                              |
+| \_grabbed              | &[aria-grabbed=true]<br>&[data-grabbed]                                                                                                                              |
+| \_pressed              | &[aria-pressed=true]<br>&[data-pressed]                                                                                                                              |
+| \_invalid              | &[aria-invalid=true]<br>&[data-invalid]                                                                                                                              |
+| \_valid                | &[data-valid]<br>&[data-state=valid]                                                                                                                                 |
+| \_loading              | &[data-loading]<br>&[aria-busy=true]                                                                                                                                 |
+| \_selected             | &[aria-selected=true]<br>&[data-selected]                                                                                                                            |
+| \_hidden               | &[hidden]<br>&[data-hidden]                                                                                                                                          |
+| \_autofill             | &:-webkit-autofill                                                                                                                                                   |
+| \_even                 | &:nth-of-type(even)                                                                                                                                                  |
+| \_odd                  | &:nth-of-type(odd)                                                                                                                                                   |
+| \_first                | &:first-of-type                                                                                                                                                      |
+| \_firstLetter          | &::first-letter                                                                                                                                                      |
+| \_last                 | &:last-of-type                                                                                                                                                       |
+| \_notFirst             | &:not(:first-of-type)                                                                                                                                                |
+| \_notLast              | &:not(:last-of-type)                                                                                                                                                 |
+| \_visited              | &:visited                                                                                                                                                            |
+| \_activeLink           | &[aria-current=page]                                                                                                                                                 |
+| \_activeStep           | &[aria-current=step]                                                                                                                                                 |
+| \_indeterminate        | &:indeterminate<br>&[aria-checked=mixed]<br>&[data-indeterminate]                                                                                                    |
+| \_groupHover           | [role=group]:hover &<br>[role=group][data-hover] &<br>[data-group]:hover &<br>[data-group][data-hover] &<br>.group:hover &<br>.group[data-hover] &                   |
+| \_peerHover            | [data-peer]:hover ~ &<br>[data-peer][data-hover] ~ &<br>.peer:hover ~ &<br>.peer[data-hover] ~ &                                                                     |
+| \_groupFocus           | [role=group]:focus &<br>[role=group][data-focus] &<br>[data-group]:focus &<br>[data-group][data-focus] &<br>.group:focus &<br>.group[data-focus] &                   |
+| \_peerFocus            | [data-peer]:focus ~ &<br>[data-peer][data-focus] ~ &<br>.peer:focus ~ &<br>.peer[data-focus] ~ &                                                                     |
+| \_groupFocusVisible    | [role=group]:focus-visible &<br>[data-group]:focus-visible &<br>.group:focus-visible &                                                                               |
+| \_peerFocusVisible     | [data-peer]:focus-visible ~ &<br>.peer:focus-visible ~ &                                                                                                             |
+| \_groupActive          | [role=group]:active &<br>[role=group][data-active] &<br>[data-group]:active &<br>[data-group][data-active] &<br>.group:active &<br>.group[data-active] &             |
+| \_peerActive           | [data-peer]:active ~ &<br>[data-peer][data-active] ~ &<br>.peer:active ~ &<br>.peer[data-active] ~ &                                                                 |
+| \_groupDisabled        | [role=group]:disabled &<br>[role=group][data-disabled] &<br>[data-group]:disabled &<br>[data-group][data-disabled] &<br>.group:disabled &<br>.group[data-disabled] & |
+| \_peerDisabled         | [data-peer]:disabled ~ &<br>[data-peer][data-disabled] ~ &<br>.peer:disabled ~ &<br>.peer[data-disabled] ~ &                                                         |
+| \_groupInvalid         | [role=group]:invalid &<br>[role=group][data-invalid] &<br>[data-group]:invalid &<br>[data-group][data-invalid] &<br>.group:invalid &<br>.group[data-invalid] &       |
+| \_peerInvalid          | [data-peer]:invalid ~ &<br>[data-peer][data-invalid] ~ &<br>.peer:invalid ~ &<br>.peer[data-invalid] ~ &                                                             |
+| \_groupChecked         | [role=group]:checked &<br>[role=group][data-checked] &<br>[data-group]:checked &<br>[data-group][data-checked] &<br>.group:checked &<br>.group[data-checked] &       |
+| \_peerChecked          | [data-peer]:checked ~ &<br>[data-peer][data-checked] ~ &<br>.peer:checked ~ &<br>.peer[data-checked] ~ &                                                             |
+| \_groupFocusWithin     | [role=group]:focus-within &<br>[data-group]:focus-within &<br>.group:focus-within &                                                                                  |
+| \_peerFocusWithin      | [data-peer]:focus-within ~ &<br>.peer:focus-within ~ &                                                                                                               |
+| \_peerPlaceholderShown | [data-peer]:placeholder-shown ~ &<br>.peer:placeholder-shown ~ &                                                                                                     |
+| \_placeholder          | &::placeholder                                                                                                                                                       |
+| \_placeholderShown     | &:placeholder-shown                                                                                                                                                  |
+| \_fullScreen           | &:fullscreen                                                                                                                                                         |
+| \_selection            | &::selection                                                                                                                                                         |
+| \_rtl                  | [dir=rtl] &<br>&[dir=rtl]                                                                                                                                            |
+| \_ltr                  | [dir=ltr] &<br>&[dir=ltr]                                                                                                                                            |
+| \_mediaDark            | @media (prefers-color-scheme: dark)                                                                                                                                  |
+| \_mediaReduceMotion    | @media (prefers-reduced-motion: reduce)                                                                                                                              |
+| \_dark                 | .antd-dark &<br>[data-theme=dark] &<br>&[data-theme=dark]                                                                                                            |
+| \_light                | .antd-light &<br>[data-theme=light] &<br>&[data-theme=light]                                                                                                         |
+| \_horizontal           | &[data-orientation=horizontal]                                                                                                                                       |
+| \_vertical             | &[data-orientation=vertical]                                                                                                                                         |
+
+## 特殊的属性
+
+除了以上的属性之外，Styled Antd 还提供了几个特殊的功能性属性，意在解决日常开发中经常遇到的样式需求。
+
+- [as](./the-as-prop.md)
+- [sx](./the-sx-prop.md)
+- [css](./the-css-prop.md)
+- [noOfLines & isTruncated](./the-noOfLines-prop.md)
+- [apply](./the-apply-prop.md)
