@@ -1,10 +1,38 @@
 {
   "name": "styled-antd",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "description": "Styled Antd 是一个基于 chakra-ui 的核心库 core 二次开发的专门为 antd 组件库设计的 css-in-js 样式解决方案。",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WaldenLiang/styled-antd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WaldenLiang/styled-antd/issues"
+  },
+  "homepage": "https://github.com/WaldenLiang/styled-antd",
+  "keywords": [
+    "styled-antd",
+    "css",
+    "styled",
+    "antd",
+    "className",
+    "components",
+    "css-in-js",
+    "styled-antd",
+    "theming",
+    "theme",
+    "responsive",
+    "react",
+    "style"
+  ],
+  "author": "Walden Liang<waldenliang@outlook.com>",
+  "license": "ISC",
   "main": "./index.js",
+  "module": "./index.mjs",
   "types": "./index.d.ts",
   "exports": {
     ".": {
+      "types": "./index.d.ts",
       "import": "./index.mjs",
       "require": "./index.js"
     }
