@@ -1,3 +1,4 @@
+/* eslint-disable no-sparse-arrays */
 import React from 'react';
 import { Box, ConfigProvider, Flex } from '../src';
 
@@ -50,3 +51,37 @@ export const VerticalWithMargin = () => (
     </Flex>
   </ConfigProvider>
 );
+
+export const responsive = () => {
+  return (
+    <ConfigProvider>
+      <Flex wrap="wrap">
+        <Box
+          bgColor="colorPrimary"
+          h="24px"
+          w={[1, , 1 / 2, 1 / 3, 1 / 4, 1 / 5]}
+        />
+        <Box
+          bgColor="colorPrimary"
+          h="24px"
+          w={[1, , 1 / 2, 1 / 3, 1 / 4, 1 / 5]}
+        />
+        <Box
+          bgColor="colorPrimary"
+          h="24px"
+          w={[1, , 1 / 2, 1 / 3, 1 / 4, 1 / 5]}
+        />
+        <Box
+          bgColor="colorPrimary"
+          h="24px"
+          w={[1, , 1 / 2, 1 / 3, 1 / 4, 1 / 5]}
+        />
+        <Box
+          bgColor="colorPrimary"
+          h="24px"
+          w={[1, , 1 / 2, 1 / 3, 1 / 4, 1 / 5]}
+        />
+      </Flex>
+    </ConfigProvider>
+  );
+};

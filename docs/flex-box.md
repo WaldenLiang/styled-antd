@@ -69,7 +69,9 @@
 你可以使用 `as` 属性来更改元素渲染，就像样式组件一样。
 
 ```tsx
-import { Link } from 'antd';
+import { Typography } from 'antd';
+
+const { Link } = Typography;
 
 <Box as="button" borderRadius="borderRadius" bg="colorPrimary" color="white" px={4} h={8}>
   Button

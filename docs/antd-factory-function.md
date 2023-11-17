@@ -22,8 +22,10 @@ const StyledButton = antd(Button);
 除此之外，你还可以在包装非 Styled Antd 组件的时候，直接添加附加样式。
 
 ```tsx
-import { Link } from 'antd';
+import { Typography } from 'antd';
 import { antd } from 'styled-antd';
+
+const { Link } = Typography;
 
 const StyledLink = antd(Link, {
   baseStyle: {
