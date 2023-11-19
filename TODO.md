@@ -9,6 +9,7 @@
 - [ ] codesandbox 例子；
 - [ ] readme；
 - [ ] 自动化程度提高；
+- [ ] run test耗时有点久；
 
 ## Processing
 

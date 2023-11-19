@@ -1,4 +1,6 @@
 # Add files here to ignore them from prettier formatting
-/dist
-/coverage
-/.nx/cache
+dist
+coverage
+node_modules
+build
+storybook-static

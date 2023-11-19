@@ -1,6 +1,6 @@
 # Styled Antd
 
-Styled Antd 是一个基于 chakra-ui 的核心库 core 二次开发的专门为 antd 组件库设计的 css-in-js 样式解决方案。
+Styled Antd 是一个参考 chakra-ui 的核心库（@chakra-ui/styled-system和@chakra-ui/system）开发的专门为 antd 组件库设计的 css-in-js 样式解决方案。
 
 ## Features
 
