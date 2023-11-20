@@ -83,7 +83,7 @@ export const Ring = () => {
   );
 };
 
-export const peerSelector = () => {
+export const PeerSelector = () => {
   return (
     <div>
       <input data-peer />

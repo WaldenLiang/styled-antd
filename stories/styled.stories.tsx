@@ -35,7 +35,7 @@ export const ApplyProp = () => (
   </ConfigProvider>
 );
 
-export const withHeading = () => (
+export const WithHeading = () => (
   <ConfigProvider>
     <div>
       <antd.h1
@@ -49,7 +49,7 @@ export const withHeading = () => (
   </ConfigProvider>
 );
 
-export const withApply = () => {
+export const WithApply = () => {
   return (
     <ConfigProvider
       styles={{

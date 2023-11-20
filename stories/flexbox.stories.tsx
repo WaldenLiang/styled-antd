@@ -6,7 +6,7 @@ export default {
   title: 'Flexbox',
 };
 
-export const withBox = () => (
+export const WithBox = () => (
   <ConfigProvider>
     <Box>
       <Box bgColor="red-5" color="white" _hover={{ bg: 'red-4' }}>
@@ -52,7 +52,7 @@ export const VerticalWithMargin = () => (
   </ConfigProvider>
 );
 
-export const responsive = () => {
+export const Responsive = () => {
   return (
     <ConfigProvider>
       <Flex wrap="wrap">
