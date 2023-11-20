@@ -8,6 +8,7 @@ export {
   type StyledAntdComponent,
   ThemeProvider,
   type ThemeProviderProps,
+  type HtmlAntdProps,
 } from './styled-factory';
 
 export { ConfigProvider, type ConfigProviderProps } from './antd';
