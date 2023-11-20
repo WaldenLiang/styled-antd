@@ -9,6 +9,9 @@ import { isStyleProp } from './utils';
 import { type As, type StyledAntdComponent } from './types';
 import { shouldForwardProp } from './should-forward-prop';
 
+const emotionStyled = ((createStyled as any).default ??
+  createStyled) as typeof createStyled;
+
 type StyleResolverProps = SystemStyleObject & {
   theme: Record<string, any>;
   sx?: SystemStyleObject;
@@ -76,7 +79,7 @@ export function styled<T extends As, P extends object = {}>(
 
   const styleObject = toCssObject({ baseStyle });
 
-  const Component = createStyled(
+  const Component = emotionStyled(
     component as React.ComponentType<any>,
     styledOptions,
   )(styleObject);
